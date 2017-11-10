@@ -1,10 +1,13 @@
 <div class="pull-right">
     <%= link_to("Add a job",new_job_path,class: 'btn btn-default')%>
 </div>
-<table class="table table-bordered">
+<table class="table table-striped">
     <% @jobs.each do |job| %>
     <tr>
-        <td><%= link_to(job.title,job_path(job)) %></td>
+        <td>
+            <%= render_job_status(job) %>
+            <%= link_to(job.title,job_path(job)) %>
+        </td>
         <td>
             <%= link_to('修改',edit_job_path(job),class: "btn btn-info") %>
             <%= link_to('删除',job_path(job),method: :delete,data: {confirm: "Are you sure?"},class: "btn btn-warning") %>
