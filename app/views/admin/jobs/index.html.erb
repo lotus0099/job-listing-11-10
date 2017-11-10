@@ -9,8 +9,13 @@
             <%= link_to(job.title,job_path(job)) %>
         </td>
         <td>
-            <%= link_to('修改',edit_job_path(job),class: "btn btn-info") %>
-            <%= link_to('删除',job_path(job),method: :delete,data: {confirm: "Are you sure?"},class: "btn btn-warning") %>
+            <%= link_to('修改',edit_job_path(job),class: "btn btn-default") %>
+            <%= link_to('删除',job_path(job),method: :delete,data: {confirm: "Are you sure?"},class: "btn btn-default") %>
+            <% if job.is_hidden %>
+                <%= link_to('Publish', publish_admin_job_path(job),class: "btn btn-success btn-xs",method: :post) %>
+            <% else %>
+                <%= link_to('Hide', hide_admin_job_path(job),class: "btn btn-primary btn-xs",method: :post) %>
+            <% end %>
         </td>
         <td><%= job.created_at %></td>
     </tr>
