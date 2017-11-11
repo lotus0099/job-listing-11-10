@@ -15,6 +15,8 @@
   background-size: cover;
   padding-bottom: 110px;
   position: relative;
+  border-radius: 0;
+  height:611px;
 }
 .jumbotron-wrap{
     position: absolute;
@@ -31,8 +33,10 @@
 .title {
   font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
   text-align: center;
-  margin-top: 200px;
-  margin-bottom: 80px;
+  margin-top: 150px;
+  margin-bottom: 0px;
+  border-top-right-radius: 3px;//右上角圆边
+  border-top-left-radius: 3px;//左上角圆边
 }
 
 .slogan {
@@ -56,3 +60,13 @@
   text-align: center;
   top: 20px;
 }
+
+ .btn-welcome {
+     padding: 8px 16px;//通过padding来决定btn的大小
+     font-size: 20px;//btn文字大小
+     letter-spacing: 3px;//调整文字间距
+     border-radius: 3px;//btn圆角
+     width: 200px;//这里用指定宽度把btn拉得更长
+     background:#f60;
+     color:#fff;
+ }
