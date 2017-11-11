@@ -1,7 +1,7 @@
 <div class="pull-right">
     <%= link_to("Add a job",new_job_path,class: 'btn btn-default')%>
 </div>
-<table class="table table-striped">
+<table class="table table-striped custab">
     <thead>
         <tr>
             <td>
@@ -38,12 +38,12 @@
             <td> <%= job.wage_lower_bound %> </td>
             <td> <%= job.wage_upper_bound %> </td>
             <td>
-                <%= link_to('修改',edit_job_path(job)) %>|
-                <%= link_to('删除',job_path(job),method: :delete,data: {confirm: "Are you sure?"}) %>|
+                <%= link_to('修改',edit_job_path(job),:class => "btn btn-xs btn-info") %>
+                <%= link_to('删除',job_path(job),method: :delete,data: {confirm: "Are you sure?"},:class => "btn btn-xs btn-danger") %>
                 <% if job.is_hidden %>
                     <%= link_to('Publish', publish_admin_job_path(job),class: "btn btn-success btn-xs",method: :post) %>
                 <% else %>
-                    <%= link_to('Hide', hide_admin_job_path(job),class: "btn btn-primary btn-xs",method: :post) %>
+                    <%= link_to('Hide', hide_admin_job_path(job),class: "btn btn-warning btn-xs",method: :post) %>
                 <% end %>
             </td>
             <td><%= job.created_at %></td>
