@@ -17,3 +17,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail {
+    border:5px;
+    box-shadow: none;
+    margin-top: 60px;
+    border-radius: 0;
+    
+}
