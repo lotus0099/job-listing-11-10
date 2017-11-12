@@ -7,4 +7,12 @@ class User < ApplicationRecord
         is_admin
     end
     has_many :resumes
+
+    def display_name
+        if self.username.present?
+            self.username
+        else
+            self.email.split("@").first
+        end
+    end
 end

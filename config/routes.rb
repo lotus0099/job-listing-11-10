@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations'} 
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     resources :jobs do
         resources :resumes
@@ -12,6 +12,9 @@ Rails.application.routes.draw do
             end
             resources :resumes
         end
+    end
+    namespace :account do
+        resources :users
     end
     root 'welcome#index'
 end

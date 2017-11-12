@@ -1,0 +1,21 @@
+<div class="col-md-12">
+    <div class="row facepanel">
+        <div class="col-md-6 col-md-offset-3 sign-up-page">
+
+            <%= simple_form_for [:account, @user] do |f| %>
+            <h2 class="text-center">
+                修改个人资料
+            </h2>
+            <div>
+                <%= f.input :username, :label =>"用户名" %>
+                <%= f.input :email, :label =>"邮箱地址" %>
+                <%= f.input :password, :label => "密码",  autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+                <%= f.input :password_confirmation, :label => "确认密码", required: false %>
+                <%= f.input :current_password, :label => "当前密码", hint: "we need your current password to confirm your changes", required: true %>
+                <%= link_to("放弃更新", account_users_path, class: "btn btn-sm btn-warning" ) %>
+                <%= f.submit "提交", class: "btn btn-sm btn-primary" %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
