@@ -1,11 +1,14 @@
 <div class="pull-right">
-    <%= link_to("Add a job",new_job_path,class: 'btn btn-default')%>
+    <%= link_to("Add a job",new_admin_job_path(@job),class: 'btn btn-default')%>
 </div>
 <table class="table table-striped custab">
     <thead>
         <tr>
             <td>
                 职缺
+            </td>
+            <td>
+                工作分类
             </td>
             <td>
                 收到履历数量
@@ -22,6 +25,7 @@
             <td>
                 刊登时间
             </td>
+
         </tr>
     </thead>
     <tbody>
@@ -32,13 +36,16 @@
                 <%= link_to(job.title,job_path(job)) %>
             </td>
             <td>
+                <%= job.category.name %>
+            </td>
+            <td>
                 <%= link_to(job.resumes.count, admin_job_resumes_path(job))%>
 
             </td>
             <td> <%= job.wage_lower_bound %> </td>
             <td> <%= job.wage_upper_bound %> </td>
             <td>
-                <%= link_to('修改',edit_job_path(job),:class => "btn btn-xs btn-info") %>
+                <%= link_to('修改',edit_admin_job_path(job),:class => "btn btn-xs btn-info") %>
                 <%= link_to('删除',job_path(job),method: :delete,data: {confirm: "Are you sure?"},:class => "btn btn-xs btn-danger") %>
                 <% if job.is_hidden %>
                     <%= link_to('Publish', publish_admin_job_path(job),class: "btn btn-success btn-xs",method: :post) %>

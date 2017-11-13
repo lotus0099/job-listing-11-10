@@ -15,4 +15,5 @@ class Job < ApplicationRecord
     scope :recent, ->{order('created_at DESC')}
 
     has_many :resumes
+    belongs_to :category 
 end
