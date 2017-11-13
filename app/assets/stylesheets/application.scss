@@ -45,7 +45,16 @@ body {
     margin-top: 25px;
     margin-right: 25px;
 }
-
+.jobs-list{
+    margin-top: 30px;
+    overflow: hidden;
+}
+.jobs-list table{
+    margin-top: 10px;
+}
+.addJob-btn{
+    margin-bottom: 10px;
+}
 .job-action-box .btn-group-lg > .btn,
 .job-action-box .btn-lg {
     width: 125px;

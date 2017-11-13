@@ -16,7 +16,8 @@
           <span class="wage"><%= @job.wage_lower_bound %> k ~ <%= @job.wage_upper_bound %> k </span>
       </p>
       <p class="created"><%= @job.created_at.strftime("%Y-%m-%d") %> <span class="website">发布于职赢网</span>
-        <a href="#"><span class="label label-success"><%= @job.category.name %></span></a>
+        <span class="label label-success"><%= @job.category.name %></span>
+        <span class="label label-warning"><%= @job.job_location %></span>
       </p>
     </div>
   <hr style="width:85%" />

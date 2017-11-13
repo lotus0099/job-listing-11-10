@@ -3,7 +3,8 @@ class Admin::JobsController < ApplicationController
     before_action :require_is_admin
     layout 'admin'
     def index
-        @jobs = Job.all
+        @jobs = Job.all.paginate(:page => params[:page], :per_page => 5)
+
     end
     def  show
         @job = Job.find(params[:id])
@@ -11,7 +12,7 @@ class Admin::JobsController < ApplicationController
     end
     def  new
         @job = Job.new
-    @categories = Category.all.map{ |c| [c.name, c.id] }
+        @categories = Category.all.map{ |c| [c.name, c.id] }
     end
     def create
         @job = Job.new(jobs_params)
@@ -31,6 +32,7 @@ class Admin::JobsController < ApplicationController
     end
     def update
         @job = Job.find(params[:id])
+        @categories = Category.all.map{ |c| [c.name, c.id] }
         @job.category_id = params[:category_id]
         if @job.update(jobs_params)
             redirect_to admin_jobs_path
@@ -55,6 +57,6 @@ class Admin::JobsController < ApplicationController
     end
     private
     def jobs_params
-        params.require(:job).permit(:title,:description,:wage_upper_bound,:wage_lower_bound,:contact_email,:is_hidden,:category_id)
+        params.require(:job).permit(:title,:description,:wage_upper_bound,:wage_lower_bound,:contact_email,:is_hidden,:category_id, :job_location, :company_name)
     end
 end

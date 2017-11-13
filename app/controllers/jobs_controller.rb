@@ -57,18 +57,20 @@ before_action :validate_search_key, only: [:search]
   protected
 
   def validate_search_key
-    @query_string = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?
-    @search_criteria = search_criteria(@query_string)
+    @query_string = params[:q].gsub(/\\|\'|\/|\?/, "")
+    if params[:q].present?
+        @search_criteria = search_criteria(@query_string)
+    end
   end
 
 
   def search_criteria(query_string)
-    { :title_cont => query_string }
+    { :title_or_company_name_or_job_location_cont => query_string }
   end
 
 
     private
         def jobs_params
-            params.require(:job).permit(:title,:description,:wage_upper_bound,:wage_lower_bound,:contact_email,:is_hidden)
+            params.require(:job).permit(:title,:description,:wage_upper_bound,:wage_lower_bound,:job_location,:company_name,:contact_email,:is_hidden)
         end
 end

@@ -1,5 +1,7 @@
 class Job < ApplicationRecord
     validates :title,presence: true
+    validates :company_name, presence: true
+    validates :job_location, presence: true
     validates :wage_upper_bound, presence: true
     validates :wage_lower_bound,presence: true
     # validates :wage_lower_bound,numericality: { greater_than: 0 }
@@ -15,5 +17,5 @@ class Job < ApplicationRecord
     scope :recent, ->{order('created_at DESC')}
 
     has_many :resumes
-    belongs_to :category 
+    belongs_to :category
 end
