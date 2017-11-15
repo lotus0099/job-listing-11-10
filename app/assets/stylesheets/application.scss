@@ -17,6 +17,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "welcome.scss";
+@import "header&footer.scss";
 
 html {
     height: 100%;
@@ -26,161 +28,45 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-
 }
-
+/*footer 置底 开始*/
 .content {
     flex: 1;
 }
-
-.navbar {
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 0;
-    border: none;
-    border-radius: 0;
-}
-
+/*footer 置底 结束*/
 .job-action-box {
     text-align: right;
     margin-top: 25px;
     margin-right: 25px;
 }
-.jobs-list{
-    margin-top: 30px;
+/*admin jobs#index 开始*/
+.jobs-list {
+    margin-top: 70px;
     overflow: hidden;
 }
-.jobs-list table{
+
+.jobs-list table {
     margin-top: 10px;
 }
-.addJob-btn{
+
+.addJob-btn {
     margin-bottom: 10px;
 }
+
 .job-action-box .btn-group-lg > .btn,
 .job-action-box .btn-lg {
     width: 125px;
 }
-
-.footer-top {
-    padding-top: 50px;
-    background: #212121;
-    overflow:hidden;
-    color:#fff;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
-}
-
-.footer-top img {
-    width: 35px;
-    margin: 5px;
-}
-.footer-box{
-    margin-top:10px;
-    margin-left: 30px;
-}
-.footer-content{
-    margin-top:10px;
-}
-// .wechat-pos{
-//     text-align: left;
-//     margin-left: 30px;
-// }
-.navbar-default {
-    background-color: #212129;
-    //背景颜色
-    border-color: #212121; //边框色
-    margin-bottom: 0; //底部 margin 不撑开距离
-}
-
-.navbar-default .navbar-header {
-    margin-left: 20px;
-}
-
-.navbar-default .navbar-brand {
-    color: #FFFFF0; //字体颜色
-    padding: 10px 15px; //上下10px，左右15px
-    line-height: 30px; //文字行高
-}
-
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:hover {
-    color: #FFFFF0; //鼠标放置在链接上的文字颜色
-    background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
-}
-
+/*admin jobs#index 结束*/
 .row2_fixed {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-
-  box-shadow: rgba(0,0,0,.1) 0 1px 5px;
-  border-bottom: 1px solid #ff5722;
-}
-
-.jumbotron {
-    margin-bottom: 0;
-}
-
-.our-brand {
-    padding: 30px 0;
-}
-
-.our-brand img {
-    margin: 25px 30px 35px;
-    width: 150px;
-}
-
-.list-unstyled {
-    padding-left: 0;
-    list-style: none;
-}
-
-.our-experts img {
-    width: 470px;
-}
-
-#search-id {
-    width: 260px;
-    margin-top: 8px;
-    margin-left: 10px;
-}
-
-.search-left {
-    width: 250px;
-    float: left;
-}
-
-.thumbnail {
-    border: 5px;
-    box-shadow: none;
-    margin-top: 60px;
-    border-radius: 0;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: rgba(226, 224, 61, 0.81);
-}
-
-.navbar-default .navbar-nav > li > a:focus,
-.navbar-default .navbar-nav > li > a:hover {
-    color: #FF6F00;
-    background-color: transparent;
-}
-// .navbar-default .navbar-nav > .active > a,
-// .navbar-default .navbar-nav > .active > a:focus,
-// .navbar-default .navbar-nav > .active > a:hover {
-//     color: #FF6F00;
-//     background-color: #FFE0B2;
-// }
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:focus,
-.navbar-default .navbar-nav > .open > a:hover {
-    background-color: #000002;
-    color: #00e8ff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+    border-bottom: 1px solid #ff5722;
 }
 /* login/sign-up */
 .facepanel {
@@ -286,17 +172,4 @@ p.index-contect {
 
 .info-company {
     float: right;
-}
-
-.footer {
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #212129;
-    border-color: #212121;
-}
-
-.footer p {
-    color: #fff;
-    margin-bottom: 0;
 }

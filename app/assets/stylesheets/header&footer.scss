@@ -1,0 +1,94 @@
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+.navbar-default {
+    background-color: #212129;
+    //背景颜色
+    border-color: #212121; //边框色
+    margin-bottom: 0; //底部 margin 不撑开距离
+}
+
+.navbar-default .navbar-header {
+    margin-left: 20px;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFFFF0; //字体颜色
+    padding: 10px 15px; //上下10px，左右15px
+    line-height: 30px; //文字行高
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: #FFFFF0; //鼠标放置在链接上的文字颜色
+    background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: rgba(226, 224, 61, 0.81);
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+    color: #FF6F00;
+    background-color: transparent;
+}
+// .navbar-default .navbar-nav > .active > a,
+// .navbar-default .navbar-nav > .active > a:focus,
+// .navbar-default .navbar-nav > .active > a:hover {
+//     color: #FF6F00;
+//     background-color: #FFE0B2;
+// }
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #000002;
+    color: #00e8ff;
+}
+
+
+
+
+
+.footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #212129;
+    border-color: #212121;
+}
+
+.footer p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+
+.footer-top {
+    padding-top: 50px;
+    background: #212121;
+    overflow: hidden;
+    color: #fff;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.footer-top img {
+    width: 35px;
+    margin: 5px;
+}
+
+.footer-box {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.footer-content {
+    margin-top: 10px;
+}
